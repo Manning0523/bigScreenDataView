@@ -1,0 +1,490 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "微软雅黑";
+    color: #FFFFFF;
+    background: #11406e;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /*		background: url(images/background1.png) no-repeat;*/
+    /*		background-size: cover;*/
+    /*		background-position : center center;*/
+    background: linear-gradient(90deg, #11406e 0%, #2F4F4F 33%, #104E8B 66%, #212121 100%);
+    background-position: 100% 0;
+    animation: bgSize 5s infinite ease-in-out alternate;
+}
+
+@keyframes bgSize {
+    0% {
+        background-size: 300% 100%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes bgSize {
+    0% {
+        background-size: 300% 100%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+#bg {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: url(../images/bg1.jpg) no-repeat;
+    background-position: left bottom;
+    background-attachment: fixed;
+    -webkit-animation: bg 20s linear infinite;
+    -moz-animation: bg 20s linear infinite;
+    -ms-animation: bg 20s linear infinite;
+    animation: bg 20s linear infinite;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    50% {
+        background-position: -80px 0px;
+    }
+
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@-webkit-keyframes bg {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    50% {
+        background-position: -80px 0px;
+    }
+
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@-ms-keyframes bg {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    50% {
+        background-position: -80px 0px;
+    }
+
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@-moz-keyframes bg {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    50% {
+        background-position: -80px 0px;
+    }
+
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+
+.row {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+.border-style {
+    margin: 10px 10px;
+    border: 2px solid #00E5EE;
+    position: relative;
+    height: 90%;
+    border-radius: 20px;
+    box-shadow: 3px 3px 20px #00E5EE;
+}
+
+    .border-style .subModule-tittle {
+        background-color: #11406e;
+        margin: -15px auto 0 30px;
+        border-radius: 5%;
+        display: block;
+        position: relative;
+        width: 150px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        border-radius: 7px;
+        border-left: 2px solid #00e5ee;
+        border-right: 2px solid #00e5ee;
+        box-shadow: -2px -2px 5px #d09903;
+    }
+
+    .border-style .subModule-content {
+        margin: 5px 5px 5px 5px;
+        height: 90%;
+    }
+
+
+/*头部*/
+
+.top {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 10%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+    .top .sysTitle {
+        height: 90%;
+        margin: 0 auto;
+        width: 30%;
+        background: url(images/tittle.png) no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+.content {
+    position: relative;
+    left: 0px;
+    height: 90%;
+    width: 100%;
+}
+
+    .content .bigClassTittle {
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        text-shadow: 0 0 3px #d09903, 0 0 3px #d09903;
+        display: block;
+        height: 30px;
+        margin: -20px 0 0 0;
+    }
+
+    /*左部*/
+
+    .content .content-left {
+        float: left;
+        height: 100%;
+        width: 25%;
+        /*		border:2px solid red;*/
+    }
+
+.content-left .left-top {
+    width: 100%;
+    height: 30%;
+}
+
+.left-top .numberPanel {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 45%;
+    margin: 1px;
+}
+
+.left-top .numberPanel1 {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 45%;
+    width: 49%;
+    margin: 1px;
+    float: left;
+}
+
+.left-top .numberPanel2 {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 45%;
+    width: 49%;
+    margin: 1px;
+    float: right;
+}
+
+.left-top .subModule-content .sumdataTip {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+    .left-top .subModule-content .sumdataTip {
+        margin-bottom: 0px;
+    }
+}
+
+.left-top .subModule-content .sumdataNum {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    color: #e8a300;
+}
+
+.content-left .left-center {
+    width: 100%;
+    height: 30%;
+}
+
+.left-center .topDataPanel {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 95%;
+    width: 32%;
+         margin:2px;
+    float: left;
+}
+@media screen and (max-width: 1280px) {
+    .left-center .topDataPanel {
+       margin: 1px;
+    }
+}
+.topDataPanel .topDataTip {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.topDataPanel .topDataContainer {
+    height: 80%;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.topDataPanel .oneTopDataContainer {
+    height: 30%;
+     
+    margin-bottom:5px;
+    display: flex;
+}
+
+    .topDataPanel .oneTopDataContainer .topDataDistrict {
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        height: 40px;
+
+        font-size: 16px;
+        line-height: 40px;
+
+        width: 40px;
+        background-size: cover;
+        color: #cdd0f7;
+    }
+
+.oneTopDataContainer .top1 {
+    background: url(images/no1.png) no-repeat;
+    border: 2px solid #f8ac59;
+}
+
+.oneTopDataContainer .top2 {
+    background: url(images/no2.png) no-repeat;
+    border: 2px solid #999;
+}
+
+.oneTopDataContainer .top3 {
+    background: url(images/no3.png) no-repeat;
+    border: 2px solid #a58756;
+}
+
+.topDataPanel .oneTopDataContainer .topDataDistrictNum {
+    height: 40px;
+    line-height: 40px;
+    font-size: 10px;
+    padding-left:10px;
+    color: #f8ac59;
+}
+@media screen and (max-width: 1280px) {
+    .topDataPanel .oneTopDataContainer {
+      margin-bottom: 0px;
+    }
+        .topDataPanel .oneTopDataContainer .topDataDistrict{
+     width: 35px; height: 35px; 
+    }
+          .topDataPanel .oneTopDataContainer .topDataDistrictNum{
+     padding-left: 0px;
+    }
+}
+.topDataPanel #topServiceDataContainer .topDataDistrictNum {
+    font-size: 8px;
+}
+
+.content-left .left-bottom {
+    width: 100%;
+    height: 37%;
+}
+
+.left-bottom #appStatContainer {
+    height: 90%;
+    margin: 5px;
+}
+
+
+
+/*中部*/
+
+
+.content .content-center {
+    float: left;
+    width: 50%;
+    height: 100%;
+    /*		border:2px solid green;*/
+}
+
+.content-center .center-top {
+    width: 100%;
+    height: 60%;
+}
+
+.center-top #mapContainer {
+    width: 100%;
+    height: 95%;
+}
+
+.content-center .center-bottom {
+    width: 100%;
+    height: 39%;
+}
+
+.center-bottom #userAndServiceStatContainer {
+    height: 90%;
+    margin: 5px;
+}
+
+/*右侧*/
+
+.content .content-right {
+    float: left;
+    width: 25%;
+    height: 100%;
+    /*		border:2px solid yellow;*/
+}
+
+.content-right .right-top {
+    width: 100%;
+    height: 30%;
+}
+
+.right-top .serverStatTableContainer {
+    height: 90%;
+    /*overflow-y:scroll;*/
+}
+
+.right-top .table * {
+    border: 0px solid transparent !important;
+    text-align: center;
+}
+
+
+.content-right .right-center {
+    width: 100%;
+    height: 30%;
+}
+
+.right-center .bugAlertTableContainer {
+    height: 90%;
+    /*overflow-y:scroll;*/
+}
+
+.right-center .table * {
+    border: 0px solid transparent !important;
+    text-align: center;
+}
+
+.right-center .table tr td:first-child {
+    color: red;
+}
+
+.content-right .right-bottom {
+    width: 100%;
+    height: 37%;
+}
+
+.right-bottom #bugNumAlertContainer {
+    height: 90%;
+    margin: 5px;
+}
+
+#bugAlertTable #hhAlertTest {
+    font-size: 20px;
+    display: block;
+    left: 30%;
+    top: 40%;
+}
+
+
+
+
+/*底部*/
+
+.bottom {
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    padding-left: 30px;
+    color: #DDDDDD;
+    opacity: .8;
+}
+
+/*复写样式*/
+.wrapper-content {
+    padding: 0px;
+}
+
+.content-tabs {
+    background: transparent;
+}
+
+.page-tabs a {
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.panel {
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+    .panel .panel-heading {
+        background: transparent;
+    }
+
+    .panel .panel-title {
+        text-align: center;
+        color: white;
+        font-size: 24px;
+    }
+
+    .panel .panel-body {
+    }
+
+@media screen and (max-width: 1280px) {
+    .table > tbody > tr > td {
+        padding: 4px;
+    }
+}

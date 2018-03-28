@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>XX监控展示中心</title>
+		<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="lib/Font-Awesome/css/font-awesome.min.css" rel="stylesheet" />
+        
+        <link href="lib/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+        <link href="lib/animate/animate.min.css" rel="stylesheet" />
+        <link href="lib/h/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="portal.css" />
+
+        <script src="provinceconfig.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+<!-- 		<div id="bg"></div> -->
+		<div class="top">
+			<div class="sysTitle">
+			</div>
+		</div>
+		<div class="content">
+			<div class ="content-left">
+				<span class="bigClassTittle"> -运维统计-</span>
+
+				<div class="left-top ">
+					<div class="border-style" >
+						<span class="subModule-tittle">全省统计</span>
+						
+						<div class="subModule-content" id="sumDataShow">
+							<div class="numberPanel1">
+								<span class="sumdataTip">接入系统数</span>
+								<span class="sumdataNum" id='sumSysNum'>0</span>
+							</div>
+							<div class="numberPanel2">
+								<span class="sumdataTip">服务总数</span>
+								<span class="sumdataNum" id='sumServiceNum'>0</span>
+							</div>
+
+							<div class="numberPanel1">
+								<span class="sumdataTip">用户总数</span>
+								<span class="sumdataNum" id='sumUserNum'>0</span>
+							</div>
+							<div class="numberPanel2">
+								<span class="sumdataTip">示范应用总数</span>
+								<span class="sumdataNum" id='sumAppNum'>0</span>
+							</div>
+						
+						</div>
+
+					</div>
+				
+				</div>
+				<div class="left-center ">
+					<div class="border-style" >
+						<span class="subModule-tittle">TOP榜单</span> 
+
+						<div class="subModule-content row" id="topDataShow">
+                            <div class="topDataPanel col-sm-4" style="padding-right:0px;padding-left:0px;">
+                                <span class="topDataTip">服务 TOP3</span>
+                                <div class="topDataContainer" id='topServiceDataContainer'>
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top1"></span>
+                                        <span class="topDataDistrictNum top1Num"></span>
+                                    </div>
+
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top2"></span>
+                                        <span class="topDataDistrictNum top2Num"></span>
+                                    </div>
+
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top3"></span>
+                                        <span class="topDataDistrictNum top3Num"></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="topDataPanel  col-sm-4" style="padding-right:0px;padding-left:0px;">
+                                <span class="topDataTip">用户 TOP3</span>
+                                <div class="topDataContainer" id='topUserDataContainer'>
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top1"></span>
+                                        <span class="topDataDistrictNum top1Num"></span>
+                                    </div>
+
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top2"></span>
+                                        <span class="topDataDistrictNum top2Num"></span>
+                                    </div>
+
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top3"></span>
+                                        <span class="topDataDistrictNum top3Num"></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="topDataPanel col-sm-4" style="padding-right:0px;padding-left:0px;">
+                                <span class="topDataTip">应用 TOP3</span>
+                                <div class="topDataContainer" id='topAppDataContainer'>
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top1"></span>
+                                        <span class="topDataDistrictNum top1Num"></span>
+                                    </div>
+
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top2"></span>
+                                        <span class="topDataDistrictNum top2Num"></span>
+                                    </div>
+
+                                    <div class="oneTopDataContainer">
+                                        <span class="topDataDistrict top3"></span>
+                                        <span class="topDataDistrictNum top3Num"></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+						
+						</div>
+					
+					</div>
+					
+				</div>
+				<div class="left-bottom ">
+					<div class="border-style" >
+						<span class="subModule-tittle">应用统计</span> 
+						<div id="appStatContainer" class="row">
+						
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+
+			<div class ="content-center">
+				<span class="bigClassTittle"> -市县监控（省级）-</span>
+				<div class="center-top ">
+					<div class="border-style" >
+						<span class="subModule-tittle">市县建设情况</span> 
+						<div id="mapContainer" class="row">
+						</div>
+					
+					
+					</div>
+					
+				</div>
+
+				<div class="center-bottom ">
+					<div class="border-style" >
+						<span class="subModule-tittle">用户及服务统计</span> 
+                        <div id="userAndServiceStatContainer" class="row">
+
+                        </div>	
+					
+					
+					</div>
+					
+				</div>
+
+			</div>
+			
+			<div class ="content-right">
+
+				<span class="bigClassTittle"> -实时预警-</span>
+
+				<div class="right-top ">
+					<div class="border-style" >
+						<span class="subModule-tittle">服务访问情况</span> 
+						<div id="serverStatTable" class="serverStatTableContainer row">
+							<table class="table table-condensed">
+							  <thead>
+								<tr>
+								  <th>用户</th>
+								  <th>服务</th>
+								  <th>市县</th>
+								  <th>时间</th>
+								</tr>
+							  </thead>
+							  <tbody>
+						
+							</table>
+						</div>
+					
+					</div>
+					
+				</div>
+
+				<div class="right-center ">
+					<div class="border-style" >
+						<span class="subModule-tittle">异常提醒</span> 
+
+						<div id="bugAlertTable" class="bugAlertTableContainer row">
+							<table class="table">
+							  <thead>
+								<tr>
+								  <th>服务</th>
+								  <th>市县</th>
+								  <th>说明</th>
+								  <th>时间</th>
+								</tr>
+							  </thead>
+							  <tbody>
+<!-- 								<span id="hhAlertTest"> 无异常</span> -->
+							</table>
+						</div>
+					
+					</div>
+					
+				</div>
+
+				<div class="right-bottom ">
+					<div class="border-style" >
+						<span class="subModule-tittle">服务访问统计</span> 
+						<div id="serviceVisitContainer" class="row" style="height:100%;">
+						
+						</div>	
+					
+					
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		
+
+        <script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/zhejiang.js" charset="utf-8"></script>
+        <script src="js/util.js"></script>
+        <script src="index.js"></script>
+	</body>
+
+</html>
